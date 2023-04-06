@@ -1,5 +1,5 @@
 /* js is synchronus and single threaded language! 
-"Higher order functions are functions that take other functions as arguments : callbacks!"
+
 welcome to asynchronous world in synchronous language! */
 
 // setTimeout(function(){
@@ -22,3 +22,10 @@ welcome to asynchronous world in synchronous language! */
 //     });
 // }
 // attachEventListener();
+
+
+
+/* Issues with callbacks:
+    callback hell: callbacks inside another callback inside another... Whenever there are multiple dependent Asynchronous operations it will result in a lot of nested callbacks.
+    inversion of control: the control of the program is inverted. The function that is passed as a callback is executed by the function that receives it.
+*/
