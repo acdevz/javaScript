@@ -40,3 +40,22 @@ Errors:
 /* 
 Block: statements grouped together to be used at where js expects a single statement.
 */
+
+
+/* 
+JS Runtime environment: JS engine + Web API + Callback Queue + Microtask Queue + Event Loop
+Js Engine: V8, SpiderMonkey, Chakra, JavaScriptCore
+
+Code -> Lexing -> Tokens -> Parsing -> AST -> Code Generation -> Machine Code
+JIT: Just In Time Compiler : compiles code to machine code at runtime.
+AOT: Ahead Of Time Compiler : compiles code to machine code at build time.
+
+Memory Heap: where objects are stored.
+Call Stack: where functions are stored.
+
+Garbage Collector: removes unused objects from memory heap. Algo: Mark and Sweep.
+    Mark and Sweep: Mark all objects that are in use. Sweep all objects that are not in use.
+    Mark and Sweep is a non-incremental algorithm. It is not efficient. It is not real time.
+    Mark and Sweep is a stop-the-world algorithm. It stops the execution of the program.
+
+ */
