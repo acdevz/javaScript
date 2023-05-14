@@ -1,8 +1,8 @@
 /* Currying in JavaScript transforms a function 
 with multiple arguments into a nested series of 
-functions, each taking a single argument. */
+functions, each taking a single argument. 
 
-/* What is it for? 
+What is it for? 
     Currying helps you avoid passing the same variable multiple times */
 
 
