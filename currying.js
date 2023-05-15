@@ -19,7 +19,7 @@ What is it for?
 /* using closures... */
 
 // function multiply(a) {
-//     return function(b) {
+  //     return function(b) {
 //         console.log(a * b);
 //     }
 // }
@@ -29,27 +29,58 @@ What is it for?
 // multiplyBy3(5);
 
 
-/* Use Cases! */
-// Reusable utility functions:
-const add = a => b => a + b;
-const add2 = add(2);
-console.log(add2(5));
+/* Use Cases!
+  Reusable utility functions:
+  Event handling: In event-driven programming, event handlers with specific configurations,
+  API calls customizations */
 
-// Event handling: In event-driven programming, event handlers with specific configurations,
 
-var curry = function(fn) {
-    return function curried(...args) {
-      if (args.length >= fn.length) {
-        return fn.apply(this, args);
-      }
-  
-      return curried.bind(this, ...args);
-    };
-  };
-  
-  /**
-   * function sum(a, b) { return a + b; }
-   * const csum = curry(sum);
-   * csum(1)(2) // 3
-   */
-  
+//1. Currying with Recursive Function Calls
+// const curry = (fn) => {
+//     return function curried(...args) {
+//     if (args.length >= fn.length) {
+//         return fn(...args);
+//     }
+//     return (...nextArgs) => {
+//         return curried(...args, ...nextArgs);
+//     }
+//   }
+// }
+
+
+//2. Currying with Recursive Function Calls + Bind Method
+const curry = (fn) => {
+  return function curried(...args) {
+    if (args.length >= fn.length) {
+      return fn.apply(this, args);
+    }
+    return curried.bind(this, ...args);
+  }
+}
+
+let multiply = function(a, b) {
+  return (a * b);
+}
+let m1 = curry(multiply);
+console.log(m1(2)(3));
+console.log(m1()()(2)(3));
+console.log(m1(2, 3));
+
+
+/* Different implementations of curry */
+
+// var curry = function (fn) {
+//   return function curried(...args) {
+//     if (args.length === 0) {
+//       return fn(...args);
+//     }
+
+//     return (...nextArgs) => {
+//       if (nextArgs.length === 0) {
+//         return fn(...args);
+//       }
+
+//       return curried(...args, ...nextArgs);
+//     };
+//   };
+// };
