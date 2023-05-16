@@ -4,7 +4,7 @@ the async keyword, it becomes an asynchronous function that automatically return
 Within an async function, we can use the await keyword to pause the execution of the code 
 until the promise is resolved or rejected. 
 
-By employing await, we can eliminate the need for explicit .then() and .catch() chains*/
+By employing await, we refactor the .then().catch().finally() into a try catch*/
 
 button.addEventListener('click', async () => {
     // Show a loading spinner
