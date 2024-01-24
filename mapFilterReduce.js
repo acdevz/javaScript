@@ -48,9 +48,9 @@ console.log(
 
 const users = [
     {firstname: "John", lastname: "Doe", age: 34},
-    {firstname: "Amy", lastname: "Dhawson", age: 22},
+    {firstname: "Lorem", lastname: "Ipsum", age: 22},
     {firstname: "Aman", lastname: "Chandra", age: 20},
-    {firstname: "Shivani", lastname: "Singh", age: 20}
+    {firstname: "Shraddha", lastname: "Kapoor", age: 20}
 ];
 
 //{34:1, 22:1, 20:2}
