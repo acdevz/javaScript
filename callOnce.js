@@ -9,3 +9,9 @@ const once = (fn) => {
       }
     }
   };
+
+  const say = (name) => console.log(`Hello ${name}`);
+
+  const said = once(say); // Hello World
+  said('World');
+  said('World');

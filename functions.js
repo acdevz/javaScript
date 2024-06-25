@@ -25,3 +25,25 @@ var h = function myName(){
         can be returned by another function and,
         can be assigned as a value to a variable.
 */
+
+/* ⭐⭐⭐ */
+// Rest and Spread operators
+
+function sum(...args){
+    console.log(args);
+}
+
+/* ⭐⭐⭐🤩⭐⭐⭐ */
+// IIFE : Immediately Invoked Function Expression
+
+(function IIFE(){
+    // named IIFE
+    console.log("IIFE called!");
+})(); // this ; is important!
+
+(() => console.log('Call 2!'))();
+
+((name) => console.log(`hi ${name}!`))("JS");
+
+if(true) console.log("ok"), console.log("not ok");
+

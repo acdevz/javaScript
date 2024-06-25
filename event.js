@@ -1,16 +1,16 @@
 /* Capturing -> bubbling */
 /* useCapture set to false, by default */
 
-// document.getElementById('grandparent').addEventListener('click', (event) =>{
-//     console.log("Grandparent!");
-// }, true);
-// document.getElementById('parent').addEventListener('click', (event) =>{
-//     event.stopPropagation();
-//     console.log("Parent!");
-// }, true);
-// document.getElementById('child').addEventListener('click', (event) =>{
-//     console.log("Child!");
-// }, true);
+document.getElementById('grandparent').addEventListener('click', (event) =>{
+    console.log("Grandparent!");
+}, true);
+document.getElementById('parent').addEventListener('click', (event) =>{
+    event.stopPropagation();
+    console.log("Parent!");
+}, true);
+document.getElementById('child').addEventListener('click', (event) =>{
+    console.log("Child!");
+}, true);
 
 /* bubbling: child to grandparent */
 /* capturing: grandparent to child */
