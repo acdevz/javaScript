@@ -6,23 +6,23 @@ const user = {
     }
 }
 
-user.shouldOpenBatCave();
+// user.shouldOpenBatCave();
 
-const jsUser = function(username, password){
-    this.username = username;
-    this.password = password;
+// const jsUser = function(username, password){
+//     this.username = username;
+//     this.password = password;
 
-    // return this;
-}
-
-// class jsUser {
-//     constructor(username, password) {
-//         this.username = username;
-//         this.password = password;
-
-//         // return this;
-//     }
+//     // return this;
 // }
+
+class jsUser {
+    constructor(username, password) {
+        this.username = username;
+        this.password = password;
+
+        // return this; 
+    }
+}
 
 
 // const batman = jsUser('batman', 'Alfred1960ROCKS!');

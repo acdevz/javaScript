@@ -4,7 +4,7 @@ const languages = ['JavaScript', 'Python', 'PHP', 'Java', 'C'];
 for(const language of languages) {
     console.log(language);
 }
-
+// of is used for iterable objects, and object literals are not iterable
 myObjs = {
     a: 1,
     b: 2,

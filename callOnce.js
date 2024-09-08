@@ -1,11 +1,11 @@
 const once = (fn) => {
     let hasBeenCalled = false;
-    return function(...args){
+    return arguments => {
       if (hasBeenCalled) {
         return undefined;
       } else {
         hasBeenCalled = true;
-        return fn(...args);
+        return fn(arguments);
       }
     }
   };
