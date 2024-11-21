@@ -1,11 +1,13 @@
 //singleton object
 // const obj = Object.create();
-const obj = new Object();
+const obj = new Object(); // object constructor
+const obj1 = {}; // object literal
 console.log(obj);
 
 // Object literal
 /* ⭐ */
 const key1 = Symbol(1);
+let fruit = "apple";
 const object = {
     num: 1,
     str: "Hello World",
@@ -14,9 +16,13 @@ const object = {
     },
     arr: [1, 2, 3],
     "full name" : "Aman Chandra",
+    [fruit] : "apple", // computed property
     [key1] : "value1", /* ⭐ */
 };
 // console.log(object[key1])
+
+// deleting properties
+// delete object.num;
 
 // freezing... ❄️
 // Object.freeze(object); // object is immutable

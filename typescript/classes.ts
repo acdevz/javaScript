@@ -1,6 +1,6 @@
 class UserOne{
     readonly userId: number;
-    // #name: string;
+    // #name: string; // -> private field proposal
     private name: string;
     constructor(name: string, id: number){
         this.name = name;
